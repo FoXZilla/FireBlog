@@ -1,0 +1,26 @@
+{
+  "name": "@foxzilla/fireblog",
+  "version": "0.0.1-alpha.10",
+  "description": ":fire: A Spec For Blog, ONLY!",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "test": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoXZilla/FireBlog.git"
+  },
+  "keywords": [
+    "FireBlog",
+    "Types"
+  ],
+  "author": "FoXZilla",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/FoXZilla/FireBlog/issues"
+  },
+  "homepage": "https://github.com/FoXZilla/FireBlog#readme",
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
+}
