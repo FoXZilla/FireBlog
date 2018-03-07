@@ -1,6 +1,6 @@
 {
   "name": "@foxzilla/fireblog",
-  "version": "0.0.1-alpha.10",
+  "version": "0.0.1-alpha.12",
   "description": ":fire: A Spec For Blog, ONLY!",
   "types": "./types/index.d.ts",
   "scripts": {

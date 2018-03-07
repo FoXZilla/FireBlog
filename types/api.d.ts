@@ -136,6 +136,16 @@ export namespace Get{
             export type call      =(user_id:UserInfo['id'])=>        response|ApiErrorResponse;
             export type asyncCall =(user_id:UserInfo['id'])=>Promise<response|ApiErrorResponse>;
         }
+        export namespace search{
+            export interface query{
+                word ?:UserInfo['nickname'];
+            }
+            export interface response extends ApiSuccessResponse{
+                user_list :UserInfo[];
+            }
+            export type call      =()=>        response|ApiErrorResponse;
+            export type asyncCall =()=>Promise<response|ApiErrorResponse>;
+        }
     }
     export namespace comment{
         export namespace remove{
@@ -149,9 +159,10 @@ export namespace Post{
     export namespace comment{
         export namespace create{
             export interface request{
-                article_id   :ArticleInfo['id'];
-                md_content :string;
-                reply_to  ?:CommentInfo['id'];
+                article_id  :ArticleInfo['id'];
+                md_content  :string;
+                reply_to   ?:CommentInfo['id'];
+                inform_list?:UserInfo['id'][];
             }
             export interface response extends ApiSuccessResponse,CommentInfo{}
             export type call      =()=>        response|ApiErrorResponse;

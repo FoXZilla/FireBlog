@@ -2,13 +2,14 @@ import {UserInfo,ResponseDate,ArticleRaw} from "./index";
 
 
 export interface CommentRaw{
-    id         :number;
-    date       :ResponseDate;
-    article_id :ArticleRaw['id'];
-    author     :UserInfo['id'];
-    md_content :string;
-    reply_to  ?:CommentRaw['id'];
-    deleted   ?:boolean;
+    id           :number;
+    date         :ResponseDate;
+    article_id   :ArticleRaw['id'];
+    author       :UserInfo['id'];
+    md_content   :string;
+    reply_to    ?:CommentRaw['id'];
+    inform_list ?:UserInfo['id'][];
+    deleted     ?:boolean;
 }
 export interface CommentInfo extends Pick<CommentRaw,
     'id'
@@ -18,6 +19,6 @@ export interface CommentInfo extends Pick<CommentRaw,
     |'md_content'
     |'reply_to'
 >{
-
+    inform_list ?:UserInfo[];
 }
 
