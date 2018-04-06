@@ -4,6 +4,9 @@ import {ApiErrorResponse,UserRaw, ApiSuccessResponse, CategoryInfo, CommentInfo,
 /*
     GET   /oauth/login/:oauth_id
     GET   /oauth/callback/:oauth_id
+    HEAD  /oauth/logout
+    GET   /oauth/logout
+    GET   /oauth/ping
     GET   /category/all
     GET   /tag/all
     GET   /article/all
@@ -12,9 +15,6 @@ import {ApiErrorResponse,UserRaw, ApiSuccessResponse, CategoryInfo, CommentInfo,
     GET   /article/detail/:article_id?password=&prevent_view_count=
     POST  /comment/create
     GET   /comment/remove/:common_id
-    HEAD  /user/logout
-    GET   /user/logout
-    GET   /user/ping
     POST  /user/update_info
     GET   /user/avatar/:user_id?size=40
     GET   /user/info/:user_id

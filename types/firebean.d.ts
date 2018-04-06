@@ -1,11 +1,13 @@
 import {CommentInfo} from "./comment";
 import {ArticleInfo} from "./article";
+import {UserInfo} from "./user";
 
 export const enum Type{
     setStorage    ='set_storage',
     removeStorage ='remove_storage',
     goComment     ='go_comment',
     goArticle     ='go_article',
+    goUser        ='go_user',
 }
 export interface DataCommon{
     _type      :Type;
@@ -29,4 +31,7 @@ export interface GoArticleData extends DataCommon,Pick<ArticleInfo,'id'|'state'>
 export interface GoCommentData extends DataCommon,Pick<CommentInfo,'id'|'article_id'|'author'|'reply_to'>{
     _type :Type.goComment;
 }
-export type Data =SetStorageData|RemoveStorageData|GoArticleData|GoCommentData;
+export interface GoUserData extends DataCommon,Pick<UserInfo,'id'>{
+    _type :Type.goUser;
+}
+export type Data =SetStorageData|RemoveStorageData|GoArticleData|GoCommentData|GoUserData;
