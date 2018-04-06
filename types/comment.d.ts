@@ -5,7 +5,7 @@ export interface CommentRaw{
     id           :number;
     date         :ResponseDate;
     article_id   :ArticleRaw['id'];
-    author       :UserInfo['id'];
+    author_id    :UserInfo['id'];
     md_content   :string;
     reply_to    ?:CommentRaw['id'];
     inform_list ?:UserInfo['id'][];
@@ -15,7 +15,7 @@ export interface CommentInfo extends Pick<CommentRaw,
     'id'
     |'date'
     |'article_id'
-    |'author'
+    |'author_id'
     |'md_content'
     |'reply_to'
 >{

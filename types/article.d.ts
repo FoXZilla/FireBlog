@@ -37,7 +37,7 @@ export interface ArticleInfo extends Pick<ArticleRaw,
     comment_list   :Comment[];
 }
 export interface Comment extends Pick<CommentInfo,'id'|'date'|'md_content'|'inform_list'>{
-    author_id       :UserInfo['id'] & CommentInfo['author'];
+    author_id       :UserInfo['id'] & CommentInfo['author_id'];
     author_nickname :UserInfo['nickname'];
     comment_list    :Omit<Comment,'comment_list'>[];
 }

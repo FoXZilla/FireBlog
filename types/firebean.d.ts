@@ -28,10 +28,16 @@ export interface RemoveStorageData extends DataCommon{
 export interface GoArticleData extends DataCommon,Pick<ArticleInfo,'id'|'state'>{
     _type :Type.goArticle;
 }
-export interface GoCommentData extends DataCommon,Pick<CommentInfo,'id'|'article_id'|'author'|'reply_to'>{
+export interface GoCommentData extends DataCommon,Pick<CommentInfo,'id'|'article_id'|'author_id'|'reply_to'>{
     _type :Type.goComment;
 }
 export interface GoUserData extends DataCommon,Pick<UserInfo,'id'>{
     _type :Type.goUser;
 }
-export type Data =SetStorageData|RemoveStorageData|GoArticleData|GoCommentData|GoUserData;
+export type Data =
+    SetStorageData
+    | RemoveStorageData
+    | GoArticleData
+    | GoCommentData
+    | GoUserData
+;
