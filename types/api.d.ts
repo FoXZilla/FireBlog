@@ -1,4 +1,5 @@
 import {ApiErrorResponse,UserRaw, ApiSuccessResponse, CategoryInfo, CommentInfo, IndexMap, Omit, ArticleInfo, ResponseDate, TagInfo, ToString, UserInfo} from "./index";
+import {Token ,TokenInfo} from "./token";
 
 
 /*
@@ -33,13 +34,10 @@ export namespace Get{
                 state:string;
             }
             export const enum Storage{Key ='fireblog.oauth.login'}
-            export interface StorageValue{//Storage.Key
-                user_id :UserInfo['id'];
-                token   :string;
-                age     :ResponseDate;
+            export interface StorageValue extends TokenInfo{// Storage.Key
             }
             export interface CookieValue{
-                token:string;
+                token:Token;
             }
             export type response =void;
             export type call      =(oauth_id:string)=>void;

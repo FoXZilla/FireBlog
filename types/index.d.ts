@@ -45,6 +45,10 @@ export {
     CommentRaw,
 } from './comment';
 
+export {
+    TokenInfo,
+} from './token';
+
 
 // FireBean
 
