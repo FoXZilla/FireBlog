@@ -35,6 +35,8 @@ export interface ArticleInfo extends Pick<ArticleRaw,
 >{
     comment_count  :number;
     comment_list   :Comment[];
+    no_comment    ?:boolean;
+    require_password ?:boolean;
 }
 export interface Comment extends Pick<CommentInfo,'id'|'date'|'md_content'|'inform_list'>{
     author_id       :UserInfo['id'] & CommentInfo['author'];
@@ -45,4 +47,5 @@ export const enum ArticleStatus{
     Publish =0,
     Private =1,
     Trash   =2,
+    Draft   =3,
 }
