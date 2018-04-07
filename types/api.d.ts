@@ -162,7 +162,6 @@ export namespace Post{
                 article_id  :ArticleInfo['id'];
                 md_content  :string;
                 reply_to   ?:CommentInfo['id'];
-                inform_list?:UserInfo['id'][];
             }
             export interface response extends ApiSuccessResponse,CommentInfo{}
             export type call      =()=>        response|ApiErrorResponse;
