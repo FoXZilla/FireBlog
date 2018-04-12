@@ -169,8 +169,8 @@ export namespace Post{
     }
     export namespace user{
         export namespace update_info{
-            export interface response extends ApiSuccessResponse,Partial<Pick<UserRaw,'nickname'|'mail'>>{}
-            export interface body extends Pick<UserRaw,'nickname'|'mail'>{}
+            export interface response extends ApiSuccessResponse,request{}
+            export interface request extends Partial<Pick<UserRaw,'nickname'|'mail'>>{}
             export type call      =()=>        response|ApiErrorResponse;
             export type asyncCall =()=>Promise<response|ApiErrorResponse>;
         }
