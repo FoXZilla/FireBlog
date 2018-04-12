@@ -93,12 +93,14 @@ export namespace Get{
             export interface query{
                 tag     ?:(TagInfo['alias'])[];
                 category?:(CategoryInfo['alias'])[];
+                keyword ?:string;
             }
             export interface response extends Get.article.all.response{}
             export type call      =()=>        response|ApiErrorResponse;
             export type asyncCall =()=>Promise<response|ApiErrorResponse>;
         }
         export namespace detail.$article_id{
+            // The comment of article sort is order by it last update time.
             // sync "grow_view_count" module when there been changed
             export interface response extends ApiSuccessResponse,ArticleInfo{}
             export interface query{
