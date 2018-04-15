@@ -2,6 +2,17 @@ import {CommentInfo} from "./comment";
 import {ArticleInfo} from "./article";
 import {UserInfo} from "./user";
 
+/*
+    run _type
+    if _close == 2
+        if isNewWindow
+            run close
+    if _close == 1
+        run close
+    if ! _redirect
+        _redirect = /
+    run _redirect
+*/
 export const enum Type{
     setStorage    ='set_storage',
     removeStorage ='remove_storage',
@@ -9,12 +20,16 @@ export const enum Type{
     goArticle     ='go_article',
     goUser        ='go_user',
 }
+export const enum CloseType{
+    justClose ='1',
+    onlyBlank ='2',
+}
 export interface DataCommon{
     _type      :Type;
     _version   :string;
     _firebean ?:'1';
     _redirect ?:string;// '/' by default
-    _close    ?:'1';
+    _close    ?:CloseType;
 }
 export interface SetStorageData extends DataCommon{
     _type:Type.setStorage;
