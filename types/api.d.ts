@@ -132,7 +132,9 @@ export namespace Get{
             export type asyncCall =(user_id:UserInfo['id'])=>void;
         }
         export namespace info.$user_id{
-            export interface response extends ApiSuccessResponse,UserInfo{}
+            export interface response extends ApiSuccessResponse,UserInfo{
+                mail ?:UserRaw['mail']; // only exist in that get self info
+            }
             export type call      =(user_id:UserInfo['id'])=>        response|ApiErrorResponse;
             export type asyncCall =(user_id:UserInfo['id'])=>Promise<response|ApiErrorResponse>;
         }
