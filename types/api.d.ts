@@ -156,6 +156,15 @@ export namespace Get{
             export type asyncCall =(comment_id:CommentInfo["id"]) =>Promise<response|ApiErrorResponse>;
         }
     }
+    export namespace fireblog{
+        export namespace version{
+            export interface response extends ApiSuccessResponse{
+                version :string;
+            }
+            export type call      =() =>        response;
+            export type asyncCall =() =>Promise<response>;
+        }
+    }
 }
 export namespace Post{
     export namespace comment{
