@@ -6,10 +6,10 @@
  * */
 export type AliasString  =string;
 /**
- * @typedef {string} ResponseDate
+ * @typedef {string} DataString
  * Conform as new Date().toISOString()
  * */
-export type ResponseDate =string;
+export type DataString =string;
 
 
 // Utils

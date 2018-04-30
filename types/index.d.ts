@@ -2,18 +2,20 @@
 
 // APIs & Cookies & Storage
 
+import {ArticleNavConfig ,BlogInfo ,CategoryNavConfig ,LinkNavConfig ,NavConfig} from "./export";
+
 export {
     Get,
     Post,
-    Storage,
-    Cookie,
+    Cookie as FireBlogCookie,
+    Storage as FireBlogStorage,
+    ApiResponse,
+    ApiErrorResponse,
+    ApiSuccessResponse,
+    NeedPasswordResponse,
     Errcode,
     ErrorErrcode,
     SuccessErrcode,
-    ApiErrorResponse,
-    ApiSuccessResponse,
-    ApiResponse,
-    NeedPasswordResponse,
 } from './api';
 
 
@@ -28,6 +30,7 @@ export {
     ArticleInfo,
     ArticleRaw,
     ArticleStatus,
+    Comment as ArticleCommentInfo,
 } from './article';
 
 export {
@@ -63,14 +66,18 @@ export {FireBean};
 
 export {
     default as FireBlogData,
+    NavConfig,
+    CategoryNavConfig,
+    LinkNavConfig,
+    ArticleNavConfig,
+    BlogInfo,
+    OAuthOption,
 } from './export';
 
 
 // Single types & Utils
 
 export {
-    AliasString,
-    ResponseDate,
     ToString,
     IndexMap,
     Omit,

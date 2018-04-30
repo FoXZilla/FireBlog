@@ -1,9 +1,10 @@
-import {UserInfo,ResponseDate,ArticleRaw} from "./index";
+import {UserInfo,ArticleRaw} from "./index";
+import {DataString} from "./common";
 
 
 export interface CommentRaw{
     id           :number;
-    date         :ResponseDate;
+    date         :DataString;
     article_id   :ArticleRaw['id'];
     author       :UserInfo['id'];
     md_content   :string;

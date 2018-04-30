@@ -1,9 +1,10 @@
-import {ResponseDate ,UserInfo} from "./index";
+import {UserInfo} from "./index";
+import {DataString} from "./common";
 
 
 export type Token =string;
 export interface TokenInfo{
     user_id :UserInfo['id'];
     token   :string;
-    age     :ResponseDate;
+    age     :DataString;
 }

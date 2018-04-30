@@ -1,4 +1,5 @@
-import {CategoryInfo, CommentInfo, TagInfo, UserInfo,Omit, ResponseDate} from "./index";
+import {CategoryInfo, CommentInfo, TagInfo, UserInfo,Omit} from "./index";
+import {DataString} from "./common";
 
 
 export interface ArticleRaw{
@@ -9,8 +10,8 @@ export interface ArticleRaw{
     state          :ArticleStatus;
     tag_list       :TagInfo['alias'][];
     category_list  :CategoryInfo['alias'][];
-    update_time    :ResponseDate;
-    create_time    :ResponseDate;
+    update_time    :DataString;
+    create_time    :DataString;
     view_count     :number;
     md_content     :string;
     meta          ?:{

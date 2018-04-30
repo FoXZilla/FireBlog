@@ -1,5 +1,6 @@
-import {ApiErrorResponse,UserRaw, ApiSuccessResponse, CategoryInfo, CommentInfo, IndexMap, Omit, ArticleInfo, ResponseDate, TagInfo, ToString, UserInfo} from "./index";
+import {ApiErrorResponse,UserRaw, ApiSuccessResponse, CategoryInfo, CommentInfo, IndexMap, Omit, ArticleInfo, TagInfo, ToString, UserInfo} from "./index";
 import {Token ,TokenInfo} from "./token";
+import FireBlogData ,{BlogInfo} from "./export";
 
 
 /*
@@ -22,6 +23,9 @@ import {Token ,TokenInfo} from "./token";
 */
 
 export namespace Get{
+    export namespace favicon{// self's icon
+        export type response =any;// 64*64
+    }
     export namespace oauth{
         export namespace login.$oauth_id{
             export type response =void;
@@ -154,6 +158,13 @@ export namespace Get{
             export interface response extends ApiSuccessResponse,CommentInfo{}
             export type call      =(comment_id:CommentInfo["id"]) =>        response|ApiErrorResponse;
             export type asyncCall =(comment_id:CommentInfo["id"]) =>Promise<response|ApiErrorResponse>;
+        }
+    }
+    export namespace blog{
+        export namespace info{
+            export interface response extends ApiSuccessResponse, BlogInfo{}
+            export type call      =() =>        response;
+            export type asyncCall =() =>Promise<response>;
         }
     }
     export namespace fireblog{

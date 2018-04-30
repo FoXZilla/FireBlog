@@ -1,4 +1,4 @@
-import {ResponseDate} from "./index";
+import {DataString} from "./common";
 
 export interface UserRaw{
     id          :number;
@@ -9,7 +9,7 @@ export interface UserRaw{
     avatar     ?:{
         [resolution:number]:string
     };
-    create_date :ResponseDate;
+    create_date :DataString;
 }
 export interface UserInfo extends Pick<UserRaw,
     'id'
