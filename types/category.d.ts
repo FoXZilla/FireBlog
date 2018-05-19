@@ -1,4 +1,4 @@
-import {AliasString} from "./index";
+import {AliasString} from "./common";
 
 
 export interface CategoryRaw{

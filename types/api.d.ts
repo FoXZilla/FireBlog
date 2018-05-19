@@ -9,23 +9,27 @@ import FireBlogData ,{BlogInfo} from "./export";
     HEAD  /oauth/logout
     GET   /oauth/logout
     GET   /oauth/ping
+
     GET   /category/all
     GET   /tag/all
     GET   /article/all
     GET   /article/search?tag=&category=
     GET   /article/grow_view_count/:article_id
     GET   /article/detail/:article_id?password=&prevent_view_count=
-    POST  /comment/create
-    GET   /comment/remove/:common_id
+
     POST  /user/update_info
     GET   /user/avatar/:user_id?size=40
     GET   /user/info/:user_id
+    GET   /user/search?word=
+
+    POST  /comment/create
+    GET   /comment/remove/:common_id
+
+    GET   /blog/info
+    GET   /fireblog
 */
 
 export namespace Get{
-    export namespace favicon{// self's icon
-        export type response =any;// 64*64
-    }
     export namespace oauth{
         export namespace login.$oauth_id{
             export type response =void;
