@@ -31,8 +31,8 @@ export interface ArticleNavConfig{
 
 export interface BlogInfo{
     name         :string;
-    api_url      :URL;// http://localhost:3000 by default
-    front_url    :URL;// http://localhost:8080 by default
+    api_url      :URL;// https://localhost:3002 by default
+    front_url    :URL;// https://localhost:3003 by default
     publish_date?:string;
     description ?:string;
     language    ?:string;// en by default
@@ -51,7 +51,7 @@ export interface BlogInfo{
     }>;
     oauth ?:IndexMap<
         OAuthOption['id'],
-        Omit<OAuthOption,'client_secret'>
+        Pick<OAuthOption,'id'|'icon'|'text'>
     >;
     default_avatar ?:{
         [size:number] :URL;

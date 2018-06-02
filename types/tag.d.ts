@@ -17,5 +17,4 @@ export interface TagInfo extends Pick<TagRaw,
     |'alias'
     |'description'
 >{
-    count:number;
 }
